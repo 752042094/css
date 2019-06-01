@@ -1,0 +1,115 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <style>
+        * {
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            -webkit-user-select: none;
+            -webkit-tap-highlight-color: transparent;
+            outline: none;
+        }
+
+        .aui-toast {
+            background: rgba(0, 0, 0, 0.7);
+            text-align: center;
+            border-radius: 0.25rem;
+            color: #ffffff;
+            position: fixed;
+            z-index: 3;
+            top: 45%;
+            left: 50%;
+            width: 7.5em;
+            min-height: 6em;
+            margin-left: -3.75em;
+            margin-top: -4rem;
+            display: none;
+        }
+
+        .aui-toast .aui-iconfont {
+            margin-top: 0.2rem;
+            display: block;
+            font-size: 2.6rem;
+        }
+
+        .aui-toast-content {
+            margin: 0 0 0.75rem;
+        }
+
+        .aui-toast-loading {
+            background-color: #ffffff;
+            border-radius: 100%;
+            margin: 0.75rem 0;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+            border: 2px solid #ffffff;
+            border-bottom-color: transparent;
+            height: 2.25rem;
+            width: 2.25rem;
+            background: transparent !important;
+            display: inline-block;
+            -webkit-animation: rotate 1s 0s linear infinite;
+            animation: rotate 1s 0s linear infinite;
+        }
+
+        @keyframes rotate {
+            0% {
+                -webkit-transform: rotate(0deg) scale(1);
+                transform: rotate(0deg) scale(1);
+            }
+            50% {
+                -webkit-transform: rotate(180deg) scale(1);
+                transform: rotate(180deg) scale(1);
+            }
+            100% {
+                -webkit-transform: rotate(360deg) scale(1);
+                transform: rotate(360deg) scale(1);
+            }
+        }
+
+        @-webkit-keyframes rotate {
+            0% {
+                -webkit-transform: rotate(0deg) scale(1);
+                transform: rotate(0deg) scale(1);
+            }
+            50% {
+                -webkit-transform: rotate(180deg) scale(1);
+                transform: rotate(180deg) scale(1);
+            }
+            100% {
+                -webkit-transform: rotate(360deg) scale(1);
+                transform: rotate(360deg) scale(1);
+            }
+        }
+    </style>
+</head>
+
+<body></body>
+<script type="text/javascript" src="../../script/api.js"></script>
+<script type="text/javascript" src="../../script/js.js"></script>
+<script type="text/javascript" src="../../res/aui/js/aui_toast.js"></script>
+<script type="text/javascript">
+    apiready = function() {
+        //如果transparent，则透明遮罩，用户无感
+        if (!api.pageParam.transparent) {
+            pageParammsg = api.pageParam.msg;
+            if (pageParammsg) {
+                msg = pageParammsg;
+            } else {
+                yuyan = km_yuyan_data();
+                msg = yuyan.加载中;
+            }
+            new auiToast().loading({
+                title: msg
+            });
+        }
+        // msg = api.pageParam.msg || '加载中';
+        setTimeout('api.closeFrame({})', 300000); //最大300秒
+    }
+</script>
+
+</html>

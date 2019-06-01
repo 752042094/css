@@ -7,7 +7,11 @@
         Developer
     </author>
     <content src="index.html" />
-    <access origin="*" />
+    <access origin="*" />    <feature name="wx">
+      <param name="urlScheme" value="wxd0d84bbf23b4a0e4"/>
+      <param name="apiKey" value="wxd0d84bbf23b4a0e4"/>
+      <param name="apiSecret" value="a354f72aa1b4c2b8eaad137ac81434cd"/>
+    </feature>
     <preference name="pageBounce" value="false"/>
 	<preference name="appBackground" value="rgba(0,0,0,0.0)"/>
 	<preference name="windowBackground" value="rgba(0,0,0,0.0)"/>

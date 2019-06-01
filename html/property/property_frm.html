@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="../../res/mui/css/mui_min.css" />
+  <title>资产</title>
+  <style>
+    body,html{
+      height: 100%;
+			width: 100%;
+      color: #fff;
+      background: #000;
+      font-size: 15px;
+      font-weight: bold;
+    }
+    .main{
+      width: 90%;
+      height: 100%;
+      margin: 0 auto;
+    }
+    /*顶部账号和资产*/
+    .uname_class{
+      width: 100%;
+      height: 50px;
+      line-height: 50px;
+      margin: 0 auto;
+    }
+    .property_class{
+      width: 100%;
+      height: 200px;
+      align-items:center;
+      display: flex;
+      justify-content: space-around;
+    }
+    .p_property{
+      position:relative;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background: #161725
+    }
+    .b_property{
+      width: 100px;
+      height: 70px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-top: -35px;
+      margin-left: -50px;
+      text-align: center;
+      line-height: 35px;
+    }
+    /*中间两个div*/
+    .p_tixian{
+      width: 100%;
+    }
+    .b_mini{
+      width: 100%;
+      border-radius: 5px;
+      background: #161725;
+      margin-bottom:20px;
+    }
+    .t_father{
+      width: 100%;
+      height: 80px;
+      display: flex;
+      justify-content: space-around;
+      align-items:center;
+      border-bottom:1px solid #272B48;
+    }
+    .tubiao{
+      width: 40px;
+      height: 40px;
+    }
+    .tubiao img{
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+    .mz{
+      width: 40%;
+    }
+    .jg{
+      width: 40%;
+      text-align:right;
+    }
+    .b_father{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+    .b_father div{
+      flex: 1;
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+    }
+    .b_left{
+      border-left:1px solid #272B48;
+      border-right:1px solid #272B48
+    }
+    .d_zhuang{
+      width: 40%;
+      height: 40px;
+      line-height: 40px;
+      border-radius: 25px;
+      text-align: center;
+      background: #161725;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="main">
+    <!-- 顶部账号 -->
+    <div class="uname_class"><span>账号：</span><span>w7520420452@163.com</span></div>
+    <!-- 资产 -->
+    <div class="property_class">
+      <div class="p_property"><div class="b_property"><span>总资产</span><span>10000.00</span></div></div>
+      <div class="p_property"><div class="b_property"><span>可用资产</span><span>10000.00</span></div></div>
+    </div>
+    <!-- 中间的转账 -->
+    <div class="p_tixian">
+      <div class="b_mini">
+        <div class="t_father">
+          <div class="tubiao"><img src="../../img/index/tubiao.png" alt=""></div>
+          <div class="mz">MIMI</div>
+          <div class="jg">0.00</div>
+        </div>
+        <div class="b_father">
+          <div>划转</div>
+          <div class="b_left">充值</div>
+          <div>提现</div>
+        </div>
+      </div>
+      <div class="b_mini">
+        <div class="t_father">
+          <div class="tubiao"><img src="../../img/index/tubiao.png" alt=""></div>
+          <div class="mz">CSS</div>
+          <div class="jg">0.00</div>
+        </div>
+        <div class="b_father">
+          <div>明细</div>
+          <div class="b_left">充值</div>
+          <div>提现</div>
+        </div>
+      </div>
+    </div>
+    <!-- 用户转账 -->
+    <div class="d_zhuang">用户转账</div>
+  </div>
+</body>
+</html>

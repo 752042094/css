@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="../../res/mui/css/mui_min.css" />
+  <title>行情</title>
+  <style>
+
+
+  </style>
+</head>
+<body>
+
+</body>
+<script type="text/javascript" src="../../script/api.js"></script>
+<script type="text/javascript" src="../../script/js.js"></script>
+<script type="text/javascript">
+apiready = function() {
+    aa();
+}
+function aa(){
+  var aliyunLive = api.require('aliyunLive');
+    aliyunLive.configStream({
+        rect: {
+             x: 0,
+             y: 50,
+             w: api.winWidth,
+             h: api.winHeight
+
+        },
+        url: '',
+        bitRate: {
+              videoMaxBitRate: 1500 * 1000,
+              videoMinBitRate: 400 * 1000,
+              videoBitRate: 600 * 1000,
+              audioBitRate: 64 * 1000
+        },
+        fps: 20,
+        screenOrientation: 'vertical',
+        reconnectTimeout: 5,
+        videoResolution: '720P',
+        videoPreset: '1280*720',
+        cameraPosition: 'front',
+        waterMarkImage: {
+            path: '',
+            location: 'leftTop',
+            maginX: 20,
+            maginY: 20
+        },
+        fixed: true
+    },function(ret) {
+          alert(JSON.stringify(ret));
+    });
+}
+</script>
+</html>

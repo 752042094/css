@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="../../res/mui/css/mui_min.css" />
+  <title>行情</title>
+  <style>
+    .main{
+      width: 100%;
+      color: #fff;
+      background: #000;
+      font-size: 16px
+    }
+    .m_father{
+      width: 100%;
+      height: 80px;
+      display: flex;
+      justify-content: space-around;
+      align-items:center;
+      border-top:1px solid #12121F
+    }
+    .tubiao{
+      width: 40px;
+      height: 40px;
+    }
+    .tubiao img{
+      width: 40px;
+      height: 40px;
+      border-radius: 50%
+    }
+    .mz{
+      width: 10%
+    }
+    .jg{
+      width: 40%;
+      text-align:right
+    }
+    .bottom{
+      width: 20%;
+      height: 35px;
+      background: #03C288;
+      line-height: 40px;
+      border-radius: 5px;
+      text-align: center;
+      font-size: 12px
+    }
+  </style>
+</head>
+<body>
+  <div class="main">
+    <div class="m_father">
+        <div class="tubiao"><img src="../../img/index/tubiao.png" alt=""></div>
+        <div class="mz">MIMI</div>
+        <div class="jg">=$0.00000065</div>
+        <div class="bottom" onclick="wx()">-30.63%</div>
+    </div>
+    <div class="m_father">
+        <div class="tubiao"><img src="../../img/index/tubiao.png" alt=""></div>
+        <div class="mz">MIMI</div>
+        <div class="jg">=$0.15215</div>
+        <div class="bottom">-30.63%</div>
+    </div>
+    <div class="m_father">
+        <div class="tubiao"><img src="../../img/index/tubiao.png" alt=""></div>
+        <div class="mz">MIMI</div>
+        <div class="jg">=$0.15215</div>
+        <div class="bottom">-30.63%</div>
+    </div>
+    <div class="m_father">
+        <div class="tubiao"><img src="../../img/index/tubiao.png" alt=""></div>
+        <div class="mz">MIMI</div>
+        <div class="jg">=$0.15215</div>
+        <div class="bottom">-30.63%</div>
+    </div>
+    <div class="m_father">
+        <div class="tubiao"><img src="../../img/index/tubiao.png" alt=""></div>
+        <div class="mz">MIMI</div>
+        <div class="jg">=$0.15215</div>
+        <div class="bottom">-30.63%</div>
+    </div>
+    <div class="m_father">
+        <div class="tubiao"><img src="../../img/index/tubiao.png" alt=""></div>
+        <div class="mz">MIMI</div>
+        <div class="jg">=$0.15215</div>
+        <div class="bottom">-30.63%</div>
+    </div>
+    <div class="m_father">
+        <div class="tubiao"><img src="../../img/index/tubiao.png" alt=""></div>
+        <div class="mz">MIMI</div>
+        <div class="jg">=$0.15215</div>
+        <div class="bottom">-30.63%</div>
+    </div>
+    <div class="m_father">
+        <div class="tubiao"><img src="../../img/index/tubiao.png" alt=""></div>
+        <div class="mz">MIMI</div>
+        <div class="jg">=$0.15215</div>
+        <div class="bottom">-30.63%</div>
+    </div>
+    <div class="m_father">
+        <div class="tubiao"><img src="../../img/index/tubiao.png" alt=""></div>
+        <div class="mz">MIMI</div>
+        <div class="jg">=$0.15215</div>
+        <div class="bottom">-30.63%</div>
+    </div>
+    <div class="m_father">
+        <div class="tubiao"><img src="../../img/index/tubiao.png" alt=""></div>
+        <div class="mz">MIMI</div>
+        <div class="jg">=$0.15215</div>
+        <div class="bottom">-30.63%</div>
+    </div>
+  </div>
+</body>
+<script type="text/javascript" src="../../script/api.js"></script>
+<script type="text/javascript" src="../../script/js.js"></script>
+<script type="text/javascript">
+function wx(){
+  var wx = api.require('wx');
+wx.isInstalled(function(ret, err) {
+    if (ret.installed) {
+      wx.auth({
+        apiKey: ''
+      }, function(ret, err) {
+        if (ret.status) {
+            alert(JSON.stringify(ret));
+        } else {
+            alert(err.code);
+        }
+      });
+    } else {
+        alert('当前设备未安装微信客户端');
+    }
+});
+}
+</script>
+</html>
